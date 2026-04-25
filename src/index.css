@@ -4,44 +4,50 @@
 
 @layer base {
   :root {
-    --background: 20 14% 6%;
-    --foreground: 30 15% 92%;
+    /* Белый фон */
+    --background: 0 0% 96%;
+    --foreground: 0 0% 7%;
 
-    --card: 20 12% 9%;
-    --card-foreground: 30 15% 92%;
+    /* Карточки — белые */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 20 12% 9%;
-    --popover-foreground: 30 15% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
 
-    --primary: 22 90% 55%;
-    --primary-foreground: 20 14% 6%;
+    /* Primary — бирюзовый #0D9488 */
+    --primary: 174 87% 32%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 20 10% 14%;
-    --secondary-foreground: 30 15% 80%;
+    /* Secondary — светло-серый для подложек */
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 20 10% 14%;
-    --muted-foreground: 30 10% 55%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 22 90% 55%;
-    --accent-foreground: 20 14% 6%;
+    /* Accent — жёлтый #EAB308 */
+    --accent: 45 93% 47%;
+    --accent-foreground: 0 0% 7%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 30 15% 92%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 20 10% 16%;
-    --input: 20 10% 16%;
-    --ring: 22 90% 55%;
+    /* Бордюры — светло-серые */
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 174 87% 32%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 20 12% 9%;
-    --sidebar-foreground: 30 15% 92%;
-    --sidebar-primary: 22 90% 55%;
-    --sidebar-primary-foreground: 20 14% 6%;
-    --sidebar-accent: 20 10% 14%;
-    --sidebar-accent-foreground: 30 15% 80%;
-    --sidebar-border: 20 10% 16%;
-    --sidebar-ring: 22 90% 55%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 174 87% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 93%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 174 87% 32%;
   }
 }
 
@@ -70,7 +76,18 @@
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10;
+    @apply transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10;
+  }
+
+  /* Жёлтый акцент для цен со скидкой */
+  .price-discount {
+    color: #eab308;
+    font-weight: 700;
+  }
+
+  .badge-sale {
+    background: #eab308;
+    color: #111111;
   }
 }
 
@@ -113,5 +130,5 @@
 
 /* Badge glow */
 .badge-glow {
-  box-shadow: 0 0 12px hsl(var(--primary) / 0.4);
+  box-shadow: 0 0 10px hsl(var(--primary) / 0.35);
 }
